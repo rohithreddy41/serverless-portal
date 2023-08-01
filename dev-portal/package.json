@@ -1,0 +1,44 @@
+{
+  "name": "dev-portal",
+  "version": "4.1.1",
+  "private": true,
+  "dependencies": {
+    "chart.js": "^2.9.4",
+    "dompurify": "^2.2.8",
+    "front-matter": "^3.0.0",
+    "js-yaml": "^4.1.0",
+    "jwt-decode": "^2.2.0",
+    "lodash": "^4.17.21",
+    "marked": "^4.0.10",
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.2.2",
+    "object-hash": "^2.0.3",
+    "query-string": "^6.12.1",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-router-dom": "^4.3.1",
+    "semantic-ui-css": "git+https://github.com/Semantic-Org/Semantic-UI-CSS.git",
+    "semantic-ui-react": "^0.87.3",
+    "swagger-ui": "github:awslabs/swagger-ui#apigw-fork-v4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "cover": "react-scripts test --coverage",
+    "coverage": "npm run cover",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.0.0",
+    "@testing-library/react": "^8.0.4",
+    "node-fetch": "^2.6.7",
+    "react-scripts": "^5.0.1"
+  }
+}

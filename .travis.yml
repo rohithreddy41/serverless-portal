@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+  - "16"
+
+cache:
+  directories:
+    - $HOME/.npm
+    - $HOME/.local
+
+# Currently unused
+# before_install:
+#   - pip install --user awscli
+#   - pip install --user aws-sam-cli
+#   - export PATH=$PATH:$HOME/.local/bin
+
+install:
+  # Do *not* use the default install command. Our system is a bit more complicated than that.
+
+  # Install dev portal dependencies
+  # Can't use `npm ci` because it fails to download our forked Swagger UI correctly.
+  - cd dev-portal
+  - npm install
+  - cd ..
+  # Restore what we have checked into Git
+  - node run reset-assets
+  # Install global dependencies
+  - npm install
+
+# Skip the npm wrapper
+script:
+  - node run test
